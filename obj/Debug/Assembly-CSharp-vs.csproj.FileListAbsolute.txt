@@ -1,0 +1,14 @@
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\Assembly-UnityScript-firstpass.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Paradox\Documents\GUImvc\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Paradox\Documents\GUImvc\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\Paradox\Documents\GUImvc\obj\Debug\Assembly-CSharp.dll
+C:\Users\Paradox\Documents\GUImvc\obj\Debug\Assembly-CSharp.pdb

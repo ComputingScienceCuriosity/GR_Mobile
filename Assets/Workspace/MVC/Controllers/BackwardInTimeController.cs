@@ -99,6 +99,7 @@ public class BackwardInTimeController : Controller
     /// <param name="e"></param>
     private void ValidateBackwardClickedNo(object sender, EventArgs e)
     {
+        backwardInTimeView.ActivateSandTimeContainer(false);
         GameObject LimitGo = GameObject.FindGameObjectWithTag("Limit");
         LimitGo.GetComponent<Limit>().SetChoice(true);
     }

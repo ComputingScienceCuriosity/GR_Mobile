@@ -9,9 +9,21 @@ public class GamePlay : State{
     /// <summary>
     /// Composants utilisant l'injection de dépendences
     /// </summary>
-    public CharacterCtrlController  characterCtrlController;
+    private CharacterCtrlController characterCtrlController;
 
-    public BackwardInTimeController backwardInTimeController;
+    public CharacterCtrlController CharacterCtrlController 
+    {
+        get { return characterCtrlController; }
+        set {characterCtrlController = value; } 
+    }
+
+    private BackwardInTimeController backwardInTimeController;
+    public BackwardInTimeController BackwardInTimeController
+    {
+        get { return backwardInTimeController; }
+        set { backwardInTimeController = value; }
+    }
+
 
     private TouchJoystickController touchJoystickController;
    

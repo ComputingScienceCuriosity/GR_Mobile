@@ -20,8 +20,8 @@ public class StateContext : MonoBehaviour
     /// <param name="state"></param>
     public void LoadStateContext(State state)
     {
-        State = state;
-        State.OnEnter();
+        _state = state;
+        _state.OnEnter();
     }
 
     /// <summary>
@@ -29,8 +29,8 @@ public class StateContext : MonoBehaviour
     /// </summary>
     public void Request()
     {
-        State.OnExit();
-        State.Handle(this);
+        _state.OnExit();
+        _state.Handle(this);
     }
 
     /// <summary>
@@ -39,10 +39,10 @@ public class StateContext : MonoBehaviour
     public void Update()
     {
         // TODO : A REVOIR quand le niveau est rechargé State deviens = NULL
-        
-        if (State != null)
-        { 
-            State.OnUpdate();
+
+        if (_state != null)
+        {
+            _state.OnUpdate();
         }
     }
 }

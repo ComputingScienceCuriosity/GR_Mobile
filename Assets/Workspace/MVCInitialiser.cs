@@ -23,8 +23,6 @@ public class MVCInitialiser :  MonoBehaviour
     // dernier niveau chargé pour changer la valeur de <currentIsInitialized>
     private string       lastLoadedLevel  =""; 
 
-    public MVCInitialiser() { }
-
     /// <summary>
     /// Initialise les GameObjects liées au compostant MVC
     /// </summary>
@@ -57,12 +55,13 @@ public class MVCInitialiser :  MonoBehaviour
                     break;
 
                 default: // Level[1:5]
+
                    stateContext.Request();
 
+                    // Permet d'éviter d'avoir plusieurs instances répétés à la fois
                    if (stateObject.GetComponent<MainMenu>() != null)
                         Destroy(stateObject.GetComponent<MainMenu>());
 
-                   // Permet d'éviter d'avoir plusieurs instances répétés à la fois
                    if (stateObject.GetComponent<GamePlay>() != null)
                         Destroy(stateObject.GetComponent<GamePlay>());
 
@@ -101,7 +100,7 @@ public class MVCInitialiser :  MonoBehaviour
             currentLoadedLevel = Application.loadedLevelName;
         }
 
-        // Si le niveau à été rechargé on init la valeur de lastLoadedLevel afin d'éffectuer un attachement
+        // Si le niveau à été chargé/rechargé on init la valeur de lastLoadedLevel afin d'éffectuer un attachement
         if (Application.isLoadingLevel)
         {
             StartCoroutine(waitForReload());
@@ -110,8 +109,8 @@ public class MVCInitialiser :  MonoBehaviour
         // Si le niveau courant à changé 
         if (!currentLoadedLevel.Equals(lastLoadedLevel))
         {
-            currentIsInitialized    = false;
-            lastLoadedLevel         = currentLoadedLevel;
+            currentIsInitialized = false;
+            lastLoadedLevel = currentLoadedLevel;
         }
 
         // Attachement de la composante compatible au niveau courant

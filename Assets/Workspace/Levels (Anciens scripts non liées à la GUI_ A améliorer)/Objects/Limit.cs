@@ -20,12 +20,12 @@ public class Limit : MonoBehaviour
         // Envoie de message de pause vers le CharacterCtrlModel & pause du temps
         GlobalVariables.Instance.isPaused = true;
         gameplay = GameObject.FindObjectOfType<GamePlay>() as GamePlay;
-        gameplay.characterCtrlController.PauseModel();
+        gameplay.CharacterCtrlController.PauseModel();
 
         // Désactivation de la coroutine de collection des commands
-        gameplay.backwardInTimeController.DisableModelRoutine();
+        gameplay.BackwardInTimeController.DisableModelRoutine();
         // Affichage du menu de choix 
-        gameplay.backwardInTimeController.ActivateViewContainer(true);
+        gameplay.BackwardInTimeController.ActivateViewContainer(true);
 
     }
 
@@ -39,7 +39,7 @@ public class Limit : MonoBehaviour
         // Si le joueur à choisie non 
         if (isChoiceNonSelected)
         {
-            gameplay.backwardInTimeController.ActivateViewContainer(false);
+            gameplay.BackwardInTimeController.ActivateViewContainer(false);
             isChoiceNonSelected = false;
             GlobalVariables.Instance.isPaused = false;
             GlobalVariables.Instance.LevelScore = GlobalVariables.Instance.Score;
